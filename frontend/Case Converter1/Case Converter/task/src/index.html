@@ -15,20 +15,20 @@
 
 <script>
     let textarea = document.getElementById("text-area");
-
+    
     let upperCase = document.getElementById("upper-case");
     upperCase.addEventListener("click", function () {
         let text = textarea.value;
         textarea.value = text.toUpperCase();
         console.log(textarea);
     });
-
+    
     let lowerCase = document.getElementById("lower-case");
     lowerCase.addEventListener("click", function () {
         let text = textarea.value;
         textarea.value = text.toLowerCase();
     });
-
+    
     let properCase = document.getElementById("proper-case");
     properCase.addEventListener("click", function () {
         let text = textarea.value.toLowerCase();
@@ -38,7 +38,7 @@
         });
         textarea.value = properWords.join(" ");
     });
-
+    
     let sentenceCase = document.getElementById("sentence-case");
     sentenceCase.addEventListener("click", function () {
         let text = textarea.value.toLowerCase();
@@ -48,22 +48,22 @@
         });
         textarea.value = sentenceCase.join(". ");
     });
-
+    
     function download(filename, text) {
         let element = document.createElement('a');
         element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
         element.setAttribute('download', filename);
-
+        
         element.style.display = 'none';
         document.body.appendChild(element);
-
+        
         element.click();
-
+        
         document.body.removeChild(element);
     }
-
+    
     let saveTextFile = document.getElementById("save-text-file");
-    saveTextFile.addEventListener("click", function() {
+    saveTextFile.addEventListener("click", function () {
         let text = textarea.value;
         console.log(text)
         download("text.txt", text);
