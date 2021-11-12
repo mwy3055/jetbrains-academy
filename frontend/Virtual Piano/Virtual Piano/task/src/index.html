@@ -1,49 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Virtual Piano</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div class="container">
-    <kbd>A</kbd>
-    <kbd>S</kbd>
-    <kbd>D</kbd>
-    <kbd>F</kbd>
-    <kbd>G</kbd>
-    <kbd>H</kbd>
-    <kbd>J</kbd>
-</div>
-
-<link href="style.css" rel="stylesheet" type="text/css">
-
-<script>
-    document.addEventListener("keydown", function (event) {
-        if (event.key === 'a') {
-            let audio = new Audio("A.mp3");
-            audio.play();
-        } else if (event.key === 's') {
-            let audio = new Audio("S.mp3");
-            audio.play();
-        } else if (event.key === 'd') {
-            let audio = new Audio("D.mp3");
-            audio.play();
-        } else if (event.key === 'f') {
-            let audio = new Audio("F.mp3");
-            audio.play();
-        } else if (event.key === 'g') {
-            let audio = new Audio("G.mp3");
-            audio.play();
-        } else if (event.key === 'h') {
-            let audio = new Audio("H.mp3");
-            audio.play();
-        } else if (event.key === 'j') {
-            let audio = new Audio("J.mp3");
-            audio.play();
-        } else {
-            console.log("Warning!")
-        }
-    });
-</script>
+    <div class="container">
+        <div class="white-keys">
+            <kbd>A</kbd>
+            <kbd>S</kbd>
+            <kbd>D</kbd>
+            <kbd>F</kbd>
+            <kbd>G</kbd>
+            <kbd>H</kbd>
+            <kbd>J</kbd>
+        </div>
+        <div class="black-keys">
+            <kbd>W</kbd>
+            <kbd id="e">E</kbd>
+            <kbd>T</kbd>
+            <kbd>Y</kbd>
+            <kbd>U</kbd>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

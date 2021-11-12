@@ -5,7 +5,6 @@ html, body {
 body {
     background-color: cornflowerblue;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -15,17 +14,49 @@ body {
     width: max-content;
     padding: 5px;
     margin: auto;
+    display: flex;
+    align-items: start;
+    justify-content: center;
 }
 
-kbd {
+.white-keys kbd {
     background-color: white;
     display: inline-block;
     width: 80px;
     height: 240px;
     border: 1px solid black;
     margin-left: -1px;
-    line-height: 350px;
+    line-height: 360px;
     text-align: center;
     justify-content: center;
     font-family: NanumGothic, sans-serif;
+}
+
+.black-keys {
+    position: absolute;
+    width: 490px;
+    margin: 0 55px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.black-keys kbd {
+    display: flex;
+    background-color: black;
+    width: 50px;
+    height: 150px;
+    line-height: 240px;
+    text-align: center;
+    justify-content: center;
+    font-family: NanumGothic, sans-serif;
+    color: white;
+}
+
+#e {
+    margin-right: 90px;
+}
+
+.hidden {
+    visibility: hidden;
 }
