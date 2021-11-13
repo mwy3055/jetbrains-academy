@@ -587,9 +587,6 @@ files:
 - name: src/script.js
   visible: true
   learner_created: true
-- name: src/src.zip
-  visible: true
-  learner_created: true
 feedback_link: https://hyperskill.org/projects/101/stages/560/implement#comment
 status: Solved
 feedback:
