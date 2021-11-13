@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<header>
+    <h1>To-Do List</h1>
+    <div class="input">
+        <label id="input-label" for="input-task"><input id="input-task" type="text"></label>
+        <button id="add-task-button">Add</button>
+    </div>
+</header>
+
+<main>
+    <ul id="task-list">
+        <li>
+            <label class="task-checkbox-label">
+                <input type="checkbox">
+            </label>
+            <span class="task">Finish To-Do List Project</span>
+            <button class="delete-btn"><i class="fa fa-close"></i>Delete</button>
+        </li>
+        <li>
+            <label class="task-checkbox-label">
+                <input type="checkbox">
+            </label>
+            <span class="task">Practice Piano</span>
+            <button class="delete-btn"><i class="fa fa-close"></i>Delete</button>
+        </li>
+        <li>
+            <label class="task-checkbox-label">
+                <input type="checkbox">
+            </label>
+            <span class="task">Eat Dinner</span>
+            <button class="delete-btn"><i class="fa fa-close"></i>Delete</button>
+        </li>
+    </ul>
+</main>
+</body>
+</html>
