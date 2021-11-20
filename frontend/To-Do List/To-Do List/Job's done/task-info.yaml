@@ -208,6 +208,120 @@ files:
         }
     );
   learner_created: false
+- name: src/style.css
+  visible: true
+  text: |-
+    body {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header {
+        text-align: center;
+        padding: 5px;
+        width: 40%;
+    }
+
+    .input {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    #input-label {
+        flex-grow: 1;
+    }
+
+    #input-task {
+        width: 100%;
+    }
+
+    main {
+        width: 40%;
+    }
+
+    #add-task-button {
+        background-color: lightpink;
+        border: none;
+        color: white;
+        padding: 9px 12px;
+        margin-left: 16px;
+        font-size: 16px;
+        cursor: pointer;
+        width: fit-content;
+    }
+
+    #add-task-button:hover {
+        background-color: hotpink;
+    }
+
+    #task-list {
+        list-style: none;
+        width: 100%;
+        padding-inline-start: 0;
+    }
+
+    li {
+        margin: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+    .task-checkbox-label {
+        margin-right: 16px;
+    }
+
+    .task {
+        flex: 1 1 auto;
+    }
+
+    .delete-btn {
+        background-color: plum; /* background */
+        border: none; /* Remove borders */
+        color: white; /* White text */
+        padding: 9px 12px; /* Some padding */
+        font-size: 16px; /* Set a font size */
+        cursor: pointer; /* Mouse pointer on hover */
+    }
+
+    i {
+        margin-right: 5px;
+    }
+
+    .delete-btn:hover {
+        background-color: mediumorchid;
+    }
+  learner_created: true
+- name: src/script.js
+  visible: true
+  text: "const taskList = document.getElementById(\"task-list\");\n\ndocument.getElementById(\"\
+    add-task-button\").addEventListener(\"click\", function () {\n    const inputTask\
+    \ = document.getElementById(\"input-task\");\n    const input = inputTask.value;\n\
+    \    if (input !== \"\") {\n        const task = document.createElement(\"li\"\
+    );\n        \n        const label = document.createElement(\"label\");\n     \
+    \   label.className = \"task-checkbox-label\";\n        const checkBox = document.createElement(\"\
+    input\");\n        checkBox.type = \"checkbox\";\n        label.appendChild(checkBox);\n\
+    \        task.appendChild(label);\n        \n        const span = document.createElement(\"\
+    span\");\n        span.className = \"task\";\n        span.innerHTML = input;\n\
+    \        task.appendChild(span);\n        \n        const deleteButton = document.createElement(\"\
+    button\");\n        deleteButton.classList.add(\"delete-btn\");\n        deleteButton.addEventListener(\"\
+    click\", () => {\n            onDeleteButtonClick(deleteButton);\n        });\n\
+    \        const i = document.createElement(\"i\");\n        i.classList.add(\"\
+    fa\", \"fa-close\");\n        i.innerHTML = \"Delete\";\n        deleteButton.appendChild(i);\n\
+    \        task.appendChild(deleteButton);\n        \n        taskList.appendChild(task);\n\
+    \    }\n    inputTask.value = \"\";\n});\n\nconst deleteButtons = taskList.getElementsByClassName(\"\
+    delete-btn\");\nfor (const button in deleteButtons) {\n    const deleteButton\
+    \ = deleteButtons[parseInt(button)];\n    if (deleteButton !== undefined) {\n\
+    \        deleteButton.addEventListener(\"click\", () => {\n            onDeleteButtonClick(deleteButton);\n\
+    \        });\n    }\n}\n\nfunction onDeleteButtonClick(deleteButton) {\n    deleteButton.parentNode.remove();\n\
+    }"
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/183/stages/929/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sat, 20 Nov 2021 05:11:48 UTC
 record: -1

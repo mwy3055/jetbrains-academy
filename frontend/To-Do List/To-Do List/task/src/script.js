@@ -10,6 +10,9 @@ document.getElementById("add-task-button").addEventListener("click", function ()
         label.className = "task-checkbox-label";
         const checkBox = document.createElement("input");
         checkBox.type = "checkbox";
+        checkBox.addEventListener("change", () => {
+            onCheckBoxChange(checkBox);
+        });
         label.appendChild(checkBox);
         task.appendChild(label);
         
@@ -44,6 +47,23 @@ for (const button in deleteButtons) {
     }
 }
 
+let checkBoxLabels = document.getElementsByClassName("task-checkbox-label");
+for (let i = 0; i < checkBoxLabels.length; i++) {
+    const label = checkBoxLabels[i];
+    const checkBox = label.getElementsByTagName("checkbox")[0];
+    if (checkBox !== undefined) {
+        checkBox.addEventListener("change", () => {
+            onCheckBoxChange(checkBox);
+        })
+    }
+}
+
 function onDeleteButtonClick(deleteButton) {
     deleteButton.parentNode.remove();
+}
+
+function onCheckBoxChange(checkBox) {
+    const label = checkBox.parentElement;
+    const task = label.parentElement.getElementsByClassName("task")[0];
+    task.classList.toggle("task-done");
 }
