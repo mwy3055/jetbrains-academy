@@ -78,10 +78,6 @@ li {
     cursor: pointer; /* Mouse pointer on hover */
 }
 
-i {
-    margin-right: 5px;
-}
-
 .delete-btn:hover {
     background-color: mediumorchid;
 }
