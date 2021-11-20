@@ -9,7 +9,7 @@ body {
 header {
     text-align: center;
     padding: 5px;
-    width: 60%;
+    width: 40%;
 }
 
 .input {
@@ -27,7 +27,7 @@ header {
 }
 
 main {
-    width: 60%;
+    width: 40%;
 }
 
 #add-task-button {
