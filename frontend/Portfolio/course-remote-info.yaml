@@ -1,36 +1,29 @@
 hyperskill_project:
-  id: 183
-  ide_files: https://stepik.org/media/attachments/lesson/531589/additional_files.json
+  id: 137
+  ide_files: https://stepik.org/media/attachments/lesson/428392/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Sun, 21 Nov 2021 10:35:58 UTC
+update_date: Thu, 01 Jan 1970 00:00:00 UTC
 stages:
-- id: 927
-  step: 13194
+- id: 730
+  step: 11307
   is_completed: true
-- id: 928
-  step: 13195
-  is_completed: true
-- id: 929
-  step: 13196
-  is_completed: true
-- id: 930
-  step: 13197
-  is_completed: true
+- id: 731
+  step: 11308
+  is_completed: false
+- id: 732
+  step: 11309
+  is_completed: false
+- id: 733
+  step: 11310
+  is_completed: false
+- id: 734
+  step: 11311
+  is_completed: false
 topics:
   0:
-  - title: Binary numbers
-    theory_id: 5544
-  - title: Hexadecimal numbers
-    theory_id: 8788
-  - title: Introduction to UI/UX
-    theory_id: 14603
-  - title: Layout grids
-    theory_id: 14922
-  - title: Interface elements
-    theory_id: 15253
-  - title: Colors
-    theory_id: 14914
+  - title: IDE
+    theory_id: 10996
   - title: World Wide Web
     theory_id: 6633
   - title: HyperText Transfer Protocol
@@ -47,26 +40,54 @@ topics:
     theory_id: 7271
   - title: Inline Elements
     theory_id: 7518
-  - title: Comments
-    theory_id: 7502
+  - title: Images
+    theory_id: 9237
+  - title: The lang attribute
+    theory_id: 12212
+  - title: WebStorm
+    theory_id: 9492
+  - title: Web development
+    theory_id: 13931
+  1:
   - title: What is CSS
     theory_id: 7678
+  - title: HTML attributes id and class
+    theory_id: 7527
+  - title: Lists
+    theory_id: 8178
+  - title: Links
+    theory_id: 11834
+  2:
+  - title: Binary numbers
+    theory_id: 5544
+  - title: Hexadecimal numbers
+    theory_id: 8788
+  - title: Introduction to UI/UX
+    theory_id: 14603
+  - title: Layout grids
+    theory_id: 14922
+  - title: Interface elements
+    theory_id: 15253
+  - title: Colors
+    theory_id: 14914
+  - title: Comments
+    theory_id: 7502
   - title: Connecting CSS to HTML
     theory_id: 7418
   - title: Basic syntax
     theory_id: 7722
-  - title: HTML attributes id and class
-    theory_id: 7527
   - title: CSS Selectors
     theory_id: 7738
-  - title: Lists
-    theory_id: 8178
   - title: Comments
     theory_id: 7730
+  - title: Google Fonts
+    theory_id: 7844
   - title: Border
     theory_id: 8355
   - title: List style
     theory_id: 11645
+  - title: Text Alignment
+    theory_id: 11589
   - title: Absolute units
     theory_id: 10605
   - title: Relative units
@@ -75,12 +96,20 @@ topics:
     theory_id: 8325
   - title: Margin and padding
     theory_id: 8346
+  - title: line-height
+    theory_id: 11153
   - title: Position
     theory_id: 11581
+  - title: Positioning Properties
+    theory_id: 8204
   - title: Float
     theory_id: 12697
   - title: Clear
     theory_id: 12705
+  - title: Attribute selectors and universal selector
+    theory_id: 12228
+  - title: Combinators
+    theory_id: 12236
   - title: Introduction to Flexbox
     theory_id: 11760
   - title: Orientation and display order
@@ -91,19 +120,23 @@ topics:
     theory_id: 11784
   - title: Colors
     theory_id: 7973
+  - title: z-index
+    theory_id: 11161
   - title: Background
     theory_id: 11670
-  - title: Web development
-    theory_id: 13931
   - title: RGB
     theory_id: 8819
-  1:
+  3:
   - title: Connecting JS to HTML
     theory_id: 7510
   - title: DOM
     theory_id: 8635
+  - title: HTML forms
+    theory_id: 6560
   - title: Comments
     theory_id: 8170
+  - title: Naming variables
+    theory_id: 8364
   - title: Functions
     theory_id: 8388
   - title: setTimeout and setInterval
@@ -114,6 +147,12 @@ topics:
     theory_id: 10857
   - title: The "addEventListener" method
     theory_id: 8723
+  - title: ClassList
+    theory_id: 11653
+  - title: Pseudo-classes
+    theory_id: 9762
+  - title: Opacity
+    theory_id: 11169
   - title: Introduction to Promises
     theory_id: 9980
   - title: '"then", "catch" and "finally" methods'
@@ -122,10 +161,8 @@ topics:
     theory_id: 10865
   - title: Arrow functions
     theory_id: 8455
-  - title: Introduction to arrays
-    theory_id: 16141
-  - title: Array creation
-    theory_id: 16356
+  - title: Introduction to animation
+    theory_id: 10287
   - title: JSON
     theory_id: 6854
   - title: Introduction to JavaScript
@@ -144,8 +181,6 @@ topics:
     theory_id: 8588
   - title: Arithmetic operators
     theory_id: 8372
-  - title: Increment and decrement
-    theory_id: 9102
   - title: Null and Undefined
     theory_id: 8564
   - title: Type conversion
@@ -154,14 +189,13 @@ topics:
     theory_id: 8580
   - title: Conditional operators
     theory_id: 8889
-  - title: For loops
-    theory_id: 9119
-  2:
-  - title: ClassList
-    theory_id: 11653
-  3:
+  4:
   - title: Introduction to operating systems
     theory_id: 9704
+  - title: Tables
+    theory_id: 10832
+  - title: Visibility
+    theory_id: 10840
   - title: Command line overview
     theory_id: 8977
   - title: Parameters and options
