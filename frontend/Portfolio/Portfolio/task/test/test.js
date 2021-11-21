@@ -22,72 +22,100 @@ async function stageTest() {
     await sleep(1000);
 
     let result = await hs.testPage(page,
-        // Test #1 - check if the document has a <h1> element
+        // Test #1 - check if the document has the header
+        () => {
+            let headers = document.getElementsByTagName('header');
+
+            if (headers === null || headers.length === 0) {
+                return hs.wrong('Cannot find the header in the document.');
+            } else if (headers.length > 1) {
+                return hs.wrong('Found more than one header in the document.');
+            }
+
+            return hs.correct();
+        },
+
+        // Test #2 - check if the document has at least one <nav> element
+        () => {
+            let nav = document.getElementsByTagName('nav');
+
+            if (nav === null || nav.length === 0) {
+                return hs.wrong('Cannot find the nav element on your web page.');
+            }
+
+            return hs.correct();
+        },
+
+        // Test #3 - check if the document has the <h1> element
         () => {
             let headings1 = document.getElementsByTagName('h1');
 
-            if (headings1 === null || headings1.length === 0) {
-                return hs.wrong('Can\'t find the h1 element. Check that you created it.');
+            if (headings1 === null ||headings1.length === 0) {
+                return hs.wrong('Cannot find h1 element on your web page.');
             }
 
             let header = headings1[0]
             let title = header.textContent || header.innerText;
 
-            if (!title || title.length === 0) {
-                return hs.wrong('Can\'t find the text inside the h1 element.');
+            if (!title || title === null || title.length === 0) {
+                return hs.wrong('Cannot find a text within h1 element.');
             }
 
             return hs.correct();
         },
-        // Test #2 - check if the document has two <h2> elements
+
+        // Test #4 - check if the document has the <footer> element
         () => {
-            let headings2 = document.getElementsByTagName('h2');
+            let footers = document.getElementsByTagName('footer');
 
-            if (headings2 === null || headings2.length < 2) {
-                return hs.wrong(`Can't find two h2 elements. Your web page should have at least two h2 elements at this stage. There are only ${headings2.length}.`);
-            }
-
-            let found_about_me = false;
-            let found_portfolio = false;
-
-            for (let header of headings2) {
-                let title = (header.textContent || header.innerText).trim();
-
-                if (title && title.toLowerCase() === 'portfolio') {
-                    found_portfolio = true;
-                }
-
-                if (title && title.toLowerCase() === 'about me') {
-                    found_about_me = true;
-                }
-            }
-
-            if (!found_about_me) {
-                return hs.wrong('Can\'t find "About me" text in one of the h2 elements.');
-            }
-
-            if (!found_portfolio) {
-                return hs.wrong('Can\'t find "Portfolio" text in one of the h2 elements.');
+            if (footers === null || footers.length === 0) {
+                return hs.wrong('Cannot find the footer in the document.');
+            } else if (footers.length > 1) {
+                return hs.wrong('Found more than one footer in the document.');
             }
 
             return hs.correct();
         },
-        // Test #3 - check if the document has at least two <img> elements
-        () => {
-            let images = document.getElementsByTagName('img');
 
-            if (images === null || images.length < 2) {
-                return hs.wrong('Cannot find at least two img elements on your web page. Add one image that will represent you and at least one that will represent your work.');
+        // Test #5 - check if the document has at least three <section> elements
+        () => {
+            let sections = document.getElementsByTagName('section');
+
+            if (sections === null || sections.length < 3) {
+                return hs.wrong(`Cannot find tree sections elements. There are only ${sections.length}.`);
             }
 
             return hs.correct();
         },
-        // Test #4 - check if the document has at least one <p> tag
-        () => {
-            let paragraphs = document.getElementsByTagName('p');
 
-            if (paragraphs === null || paragraphs.length < 1) {
-                return hs.wrong('Cannot find at least one <p> element on your web page.');
+        // Test #6 - check the "about me" section
+        () => {
+            let sections = document.getElementById('about');
+
+            if (sections === null || sections.length < 1) {
+                return hs.wrong('Cannot find a section with the "about" id.');
+            }
+
+            return hs.correct();
+        },
+
+        // Test #7 - check the "portfolio" section
+        () => {
+            let sections = document.getElementById('portfolio');
+
+            if (sections === null || sections.length < 1) {
+                return hs.wrong('Cannot find a section with the "portfolio" id.');
+            }
+
+            return hs.correct();
+        },
+
+        // Test #8 - check the "contacts" section
+        () => {
+            let sections = document.getElementById('contacts');
+
+            if (sections === null || sections.length < 1) {
+                return hs.wrong('Cannot find a section with the "contacts" id.');
             }
 
             return hs.correct();
