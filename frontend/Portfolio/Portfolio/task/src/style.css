@@ -66,10 +66,33 @@ header a:link, a:active, a:visited {
 
 #portfolio {
     background-color: rgba(22, 181, 142, .7);
+    justify-content: center;
 }
 
 #portfolio figure {
     text-align: center;
+}
+
+.window {
+    margin-top: -200px;
+    background-color: lightgreen;
+    padding: 10px 20px;
+    border: 1px solid black;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    display: none;
+}
+
+.popup-close {
+    padding: 10px 20px;
+    background-color: lawngreen;
+    border: 1px solid greenyellow;
+}
+
+.popup-close:hover {
+    background-color: lime;
+    cursor: pointer;
 }
 
 #contacts {
