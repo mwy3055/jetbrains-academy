@@ -216,6 +216,31 @@ async function stageTest() {
             }
 
             return hs.correct()
+        },
+
+        // Test #12 -  check that the page has a hamburger menu
+        () => {
+            let buttons = document.getElementsByClassName('hamburger');
+
+            if (buttons === null || buttons.length === 0) {
+                return hs.wrong('Not find the hamburger menu on your page. Create it and set the "hamburger" class to the tag that wraps the menu elements.');
+            }
+
+            return hs.correct()
+        },
+
+        // Test #13
+        () => {
+            let burger = document.getElementsByClassName('hamburger')[0];
+
+            let display = window.getComputedStyle(burger).display;
+            let visibility = window.getComputedStyle(burger).visibility;
+
+            if (window.innerWidth >= 900 && (display === 'none' || visibility === 'hidden')) {
+                return hs.correct()
+            }
+
+            return hs.wrong('The menu must not be hamburger when the screen width >= 900 px');
         }
     );
 
