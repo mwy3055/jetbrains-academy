@@ -1,0 +1,16 @@
+type: code
+files:
+- name: src/Task.kt
+  visible: true
+  text: |-
+    fun sum5(a1: Int, a2: Int, a3: Int, a4: Int, a5: Int): Int{
+        // TODO
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7856
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/7856">JetBrains
+    Academy</a></html>
+  time: Sat, 08 Aug 2020 02:18:16 UTC
+record: -1

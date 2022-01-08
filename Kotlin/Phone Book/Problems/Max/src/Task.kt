@@ -1,0 +1,1 @@
+val lambda = { a: Int, b: Int -> if (a < b) b else a }

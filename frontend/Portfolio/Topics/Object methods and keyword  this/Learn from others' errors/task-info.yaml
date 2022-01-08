@@ -1,0 +1,16 @@
+type: code
+files:
+- name: main.js
+  visible: true
+  text: |-
+    let animal = (
+      name: "cat",
+      sound: "meow",
+      animalSay() {
+        return "A " + "this".name + " says " + "this".sound;
+      }
+    );
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8719#comment
+status: Solved
+record: -1
